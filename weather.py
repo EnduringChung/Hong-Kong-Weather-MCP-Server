@@ -217,8 +217,13 @@ async def get_weather(dataType: str, lang:str) -> str:
         else:
             return formatting_weather(data, dataType) # if data else "Request failed"
 
-if __name__ == "__main__":
+def main():
+    """Main entry point for the server."""
     import logging
     logging.basicConfig(level=logging.DEBUG)
     # Initialize and run the server
     mcp.run(transport='stdio')
+
+
+if __name__ == "__main__":
+    main()

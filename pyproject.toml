@@ -1,10 +1,23 @@
 [project]
 name = "weather"
 version = "0.1.0"
-description = "Add your description here"
+description = "MCP server for Hong Kong Observatory weather data"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "httpx>=0.28.1",
-    "mcp[cli]>=1.13.0",
+    "mcp>=1.13.0",
 ]
+authors = [{name = "Holim", email = "acta.et.sapientia@gmail.com"}]
+license = {text = "MIT"}
+
+[project.scripts]
+hko-weather-mcp = "weather:main"
+
+[project.urls]
+Homepage = "https://github.com/EnduringChung/Hong-Kong-Weather-MCP-Server"
+Repository = "https://github.com/EnduringChung/Hong-Kong-Weather-MCP-Server"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
